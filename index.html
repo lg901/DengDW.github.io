@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邓大王的音乐</title>
+  <style>
+    /* 设置网页背景为背景图并添加高斯模糊效果 */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url("img/logo.png"); /* 将"path/to/your/background-image.jpg"替换为您的背景图路径 */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: blur(0px); /* 设置高斯模糊效果，数值可根据需要调整 */
+    }
+
+    /* 图片展示区域样式，与之前相同 */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 10px;
+      width: 90%;
+      margin: auto;
+    }
+
+    .square {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .square:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+  <script>
+    // JavaScript代码，用于添加点击图片播放音频的功能
+    document.addEventListener("DOMContentLoaded", function() {
+      const squares = document.querySelectorAll('.square');
+      let currentAudio = null;
+
+      squares.forEach(square => {
+        square.addEventListener('click', () => {
+          const audioFile = square.dataset.audio;
+
+          // 停止之前的音频播放
+          if (currentAudio) {
+            currentAudio.pause();
+          }
+
+          // 播放新的音频
+          const audio = new Audio(audioFile);
+          audio.play();
+          currentAudio = audio;
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="gallery">
+    <img class="square" src="img/BINGBIAN病变 (女声版) - 鞠文娴.jpg" data-audio="mp3/BINGBIAN病变 (女声版) - 鞠文娴.mp3">    
+    <img class="square" src="img/侧脸 - 于果.jpg" data-audio="mp3/侧脸 - 于果.mp3">
+    <img class="square" src="img/写给我第一个喜欢的女孩的歌 - 洛少爷.jpg" data-audio="mp3/写给我第一个喜欢的女孩的歌 - 洛少爷.mp3">
+    <img class="square" src="img/剑网三·画 (剧情版) - 风语木屋 _ 随安然.jpg" data-audio="mp3/剑网三·画 (剧情版) - 风语木屋 _ 随安然.mp3">
+    <img class="square" src="img/勾指起誓 (甜味小少年ver) - 洛少爷.jpg" data-audio="mp3/勾指起誓 (甜味小少年ver) - 洛少爷.mp3">
+    <img class="square" src="img/匆匆那年 - 王菲.jpg" data-audio="mp3/匆匆那年 - 王菲.mp3">
+    <img class="square" src="img/可我不是她 - 陈又又.jpg" data-audio="mp3/可我不是她 - 陈又又.mp3">
+    <img class="square" src="img/后来的我们 - 五月天.jpg" data-audio="mp3/后来的我们 - 五月天.mp3">
+    <img class="square" src="img/夏风 - Gifty.jpg" data-audio="mp3/夏风 - Gifty.mp3">
+    <img class="square" src="img/小情歌 (苏打绿版) - 苏打绿.jpg" data-audio="mp3/小情歌 (苏打绿版) - 苏打绿.mp3">
+    <img class="square" src="img/怎么办我爱你 - 本兮.jpg" data-audio="mp3/怎么办我爱你 - 本兮.mp3">
+    <img class="square" src="img/怨苍天变了心 (吉他版) - 王小帅.jpg" data-audio="mp3/怨苍天变了心 (吉他版) - 王小帅.mp3">
+    <img class="square" src="img/我不是你的宋冬野 - 刘大壮.jpg" data-audio="mp3\我不是你的宋冬野 - 刘大壮.mp3">
+    <img class="square" src="img/我好想你 (I Miss You So) - 苏打绿.jpg" data-audio="mp3\我好想你 (I Miss You So) - 苏打绿.mp3">
+    <img class="square" src="img/我知道你 - 励阳 _ 徐君.jpg" data-audio="mp3/我知道你 - 励阳 _ 徐君.mp3">
+    <img class="square" src="img/最后一页 - Cornelius.jpg" data-audio="mp3\最后一页 - Cornelius.mp3">
+    <img class="square" src="img/有形的翅膀 - 张韶涵.jpg" data-audio="mp3/有形的翅膀 - 张韶涵.mp3">
+    <img class="square" src="img/每次幸福就会有不好的事情发生 - Sixgod_.jpg" data-audio="mp3/每次幸福就会有不好的事情发生 - Sixgod_.mp3">
+    <img class="square" src="img/画心 - 池鱼.jpg" data-audio="mp3/画心 - 池鱼.mp3">
+    <img class="square" src="img/绿色 - 陈雪凝.jpg" data-audio="mp3/绿色 - 陈雪凝.mp3">
+    <img class="square" src="img/蒲公英的约定 - 周杰伦.jpg" data-audio="mp3/蒲公英的约定 - 周杰伦.mp3">
+    <img class="square" src="img/追光者 - 岑宁儿.jpg" data-audio="mp3/追光者 - 岑宁儿.mp3">
+    <img class="square" src="img/那个夏天 - 袁小朵.jpg" data-audio="mp3/那个夏天 - 袁小朵.mp3">
+    <img class="square" src="img/那女孩对我说 - Uu (刘梦妤).jpg" data-audio="mp3/那女孩对我说 - Uu (刘梦妤).mp3">
+    <!-- 添加其他图片并设置对应的data-audio属性 -->
+</div>
+</body>
+</html>
